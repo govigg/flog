@@ -6,3 +6,22 @@ For now there is only polish language but u can set it by yourself, u can find t
 - GUI for admins
 - Store to database
 - DarkRP compatible
+
+## Log categories
+- ULX
+- Tools
+- Chat
+- Damage (also work with props and cars)
+- Spawn prop
+- Connect
+- Disconnect
+- DarkRP Law
+- DarkRP Arrest
+- DarkRP Demote
+- DarkRP Door Ram
+- DarkRP Hitman
+- DarkRP Lockpick
+- DarkRP Name
+- DarkRP Buy
+- DarkRP Wanted
+- DarkRP Warrant
