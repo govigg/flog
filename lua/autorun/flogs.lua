@@ -1,0 +1,33 @@
+FLOGS_VERSION = 1.0
+
+FLOGS_CONNECT = 1
+FLOGS_DISCONNECT = 2
+FLOGS_TOOL = 3
+FLOGS_FADMIN = 4
+FLOGS_ULX = 5
+FLOGS_CHAT = 6
+FLOGS_DMG_ENTITY = 7
+FLOGS_PROPSPAWN = 8
+FLOGS_DARKRP_ADDLAW = 9
+FLOGS_DARKRP_ARREST = 10
+FLOGS_DARKRP_UNARREST = 11
+FLOGS_DARKRP_DEMOTE = 12
+FLOGS_DARKRP_DOORRAM = 13
+FLOGS_DARKRP_HITMAN = 14
+FLOGS_DARKRP_LOCKPICK = 15
+FLOGS_DARKRP_NAME = 16
+FLOGS_DARKRP_PURCHASE = 17
+FLOGS_DARKRP_WANTED = 18
+FLOGS_DARKRP_WARRANT = 19
+
+if SERVER then
+	include("flogs/server/mysqlite.lua")
+	include("flogs/config.lua")
+
+	include("flogs/server/sv_flogs.lua")
+
+	AddCSLuaFile("flogs/client/main.lua")
+end
+if CLIENT then
+	include("flogs/client/main.lua")
+end
