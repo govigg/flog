@@ -437,6 +437,15 @@ local function sendData(dat,ply)
 		if k.category == FLOGS_DARKRP_WANTED or k.category == FLOGS_DARKRP_WARRANT then
 			local dq = util.JSONToTable(k.message)
 			if not table.HasValue(users,dq.officer) then table.insert(users,dq.officer) end
+			continue
+		end
+		if k.category == FLOGS_DARKRP_HITMAN then
+			local dq = util.JSONToTable(k.message)
+			if not table.HasValue(users,dq.target) then table.insert(users,dq.target) end
+			if dq.customer then
+				if not table.HasValue(users,dq.customer) then table.insert(users,dq.customer) end
+			end
+			continue
 		end
 	end
 	local where = "steamid='"..string.Implode("' OR steamid='",users).."'"
